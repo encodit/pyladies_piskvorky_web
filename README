@@ -1,0 +1,13 @@
+Webové rozhraní pro 1D piškvorky
+
+Jak to spustit:
+- Naklonuj si tento repozitář
+- Přidej moduly z piškvorek (util.py s funkcí tah, ai.py s funkcí tah_pocitace)
+    (tah_pocitace musí umět hrát za křížky i za kolečka, podle 2. parametru)
+- Aktivuj virtuální prostředí
+- Nainstaluj Flask (python -m pip install flask)
+- Nastav FLASK_APP:
+  Linux/Mac OS: export FLASK_APP=web.py
+  Windows: set FLASK_APP=web.py
+- Spusť to pomocí: flask run
+- Běž na adresu, kterou to ukáže.

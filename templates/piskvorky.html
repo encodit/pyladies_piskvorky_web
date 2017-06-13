@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Piškvorky</title>
+    </head>
+    <body>
+        <h1>Piškvorky</h1>
+        <p>
+            {% for znak in pole %}
+                {% if znak == '-' %}
+                    <a href="{{ url_for('piskvorky_tah', pole=pole, pozice=loop.index0) }}">_</a>
+                {% else %}
+                    {{ znak }}
+                {% endif %}
+            {% endfor %}
+        </p>
+    </body>
+</html>
