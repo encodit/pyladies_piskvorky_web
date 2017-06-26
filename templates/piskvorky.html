@@ -9,7 +9,7 @@
         <p>
             {% for znak in pole %}
                 {% if znak == '-' %}
-                    <a href="{{ url_for('piskvorky_tah', pole=pole, pozice=loop.index0) }}">_</a>
+                    <a href="{{ url_for('piskvorky_tah', pole=pole, pozice=loop.index0) }}">_</a> <!--pokud kliknu na pomlčku -- odkaz na tah-->
                 {% else %}
                     {{ znak }}
                 {% endif %}

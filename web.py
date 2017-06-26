@@ -2,14 +2,18 @@ from flask import Flask, render_template, redirect, url_for
 
 # Doplň vlastní Piškvorky!
 from ai import tah_pocitace
-from util import tah
+from ai import tah
+
+# export FLASK_APP=web.py
+# flask run --reload --debugger
 
 # Vytvoření aplikace. To __name__ i jméno proměnné "app" jsou důležité.
+
 app = Flask(__name__)
 
 
 # Hlavní stránka. Je na ní odkaz na začátek hry.
-@app.route('/')
+@app.route('/')     #pokud se zeptá na adresu / == domovská stránka --> flask odpoví index.html
 def index():
     return render_template('index.html')
 
@@ -42,7 +46,7 @@ def piskvorky_tah(pole, pozice):
     pole = tah_pocitace(pole, 'o')
 
     if 'ooo' in pole:
-        # Poičítač vyhrál :(
+        # Počítač vyhrál :(
 
         # Přesměrování na hlavní stránku. Lepší by byla stránka
         # s nějakou utěšující zprávou
